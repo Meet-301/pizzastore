@@ -1,16 +1,18 @@
 {
-  "items": [
-    {
-      "id": 1,
-      "name": "Margherita",
-      "price": 5.99,
-      "description": "Classic cheese pizza"
-    },
-    {
-      "id": 2,
-      "name": "Pepperoni",
-      "price": 7.99,
-      "description": "Pepperoni pizza"
-    }
-  ]
-}
+    "items": [
+      {
+        "id": 1,
+        "name": "Margherita",
+        "ingredients": ["tomato", "mozzarella", "basil"],
+        "price": 8.5,
+        "image": "/images/margherita.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Pepperoni",
+        "ingredients": ["tomato", "mozzarella", "pepperoni"],
+        "price": 9.5,
+        "image": "/images/pepperoni.jpg"
+      }
+    ]
+  }  
