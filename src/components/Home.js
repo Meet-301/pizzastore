@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import '../styles/Home.css';
-import pizza1 from "../images/pizza1.jpg"
+import pizza1 from "../images/pizza1.avif"
 
 function Home() {
     return (
