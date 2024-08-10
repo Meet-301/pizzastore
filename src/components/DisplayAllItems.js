@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 
 /**
  * @typedef {Object} Item
@@ -17,6 +17,8 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 function DisplayAllItems() {
     const [items, setItems] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
 
     useEffect(() => {
         axios.get('http://localhost:5000/items')
@@ -27,6 +29,16 @@ function DisplayAllItems() {
                 console.error("There was an error fetching the data!", error);
             });
     }, []);
+
+    const handleShowModal = (item) => {
+        setSelectedItem(item);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelectedItem(null);
+    };
 
     return (
         <Container className="display-all-items">
@@ -42,18 +54,41 @@ function DisplayAllItems() {
                                 style={{ height: '200px', objectFit: 'cover' }} 
                             />
                             <Card.Body>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <Card.Text>
+                                        <strong>Price: &#8377;{item.price}</strong>
+                                    </Card.Text>
+                                    <Button 
+                                        variant="primary" 
+                                        onClick={() => handleShowModal(item)}
+                                    >
+                                        Details
+                                    </Button>
+                                </div>
                                 <Card.Title>{item.name}</Card.Title>
-                                <Card.Text>
-                                    {item.description}
-                                </Card.Text>
-                                <Card.Text>
-                                    <strong>Price: &#8377;{item.price}</strong>
-                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
                 ))}
             </Row>
+
+            {/* Modal for displaying item details */}
+            {selectedItem && (
+                <Modal show={showModal} onHide={handleCloseModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{selectedItem.name}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p><strong>Ingredients:</strong></p>
+                        <p>{selectedItem.ingredients.join(', ')}</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            )}
         </Container>
     );
 }
