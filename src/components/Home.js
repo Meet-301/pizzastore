@@ -50,7 +50,7 @@ function Home() {
                         </Col>
                         <Col md={4} className="text-center">
                             <img
-                                src="https://images.unsplash.com/photo-1574760186312-1ab54acb1936"
+                                src= {delivery}
                                 alt="Fast Delivery"
                                 className="img-fluid feature-image"
                             />
