@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import '../styles/Home.css'; // Adjusted import
+import '../styles/Home.css';
+import delivery from "../images/delivery.jpg";
 
 function Home() {
     return (
@@ -32,7 +33,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHBpenphfGVufDB8fHx8MTYyNjUxODMyMA&ixlib=rb-1.2.1&q=80&w=1080"
+                        src= {delivery}
                         alt="Fast Delivery"
                     />
                     <Carousel.Caption>
