@@ -44,7 +44,10 @@ function DisplayAllItems() {
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
-                                    Ingredients: {item.ingredients.join(', ')}
+                                    {item.description}
+                                </Card.Text>
+                                <Card.Text>
+                                    <strong>Price: &#8377;{item.price}</strong>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
