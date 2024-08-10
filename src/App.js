@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import DisplayAllItems from './components/DisplayAllItems';
 import MyItems from './components/MyItems';
+import AddItem from "./components/AddItem";
 import UpdateItem from './components/UpdateItem';
 import DeleteItem from './components/DeleteItem';
 import Contact from './components/Contact';
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/items" element={<DisplayAllItems />} />
                     <Route path="/myitems" element={<MyItems />} />
+                    <Route path="/additem" element={<AddItem />} />
                     <Route path="/update/:id" element={<UpdateItem />} />
                     <Route path="/delete/:id" element={<DeleteItem />} />
                     <Route path="/contact" element={<Contact />} />
