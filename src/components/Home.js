@@ -6,6 +6,7 @@ import pizza2 from "../images/pizza2.jpg"
 import pizza3 from "../images/pizza3.jpg"
 import ingredient from "../images/ingredient.jpg"
 import delivery from "../images/delivery.jpg"
+import taste from "../images/taste.jpg"
 
 function Home() {
     return (
@@ -59,7 +60,7 @@ function Home() {
                         </Col>
                         <Col md={4} className="text-center">
                             <img
-                                src="https://images.unsplash.com/photo-1599785209707-b379da082de6?ixlib=rb-4.0.3&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGRlc3Nlcml0JTIwZGVsaXZlcnl8fDB8fHx8MTY4MDc1MjUzOA&ixlib=rb-1.2.1&q=80&w=1080"
+                                src= {taste}
                                 alt="Great Taste"
                                 className="img-fluid feature-image"
                             />
