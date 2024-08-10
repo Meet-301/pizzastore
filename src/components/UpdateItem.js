@@ -1,28 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import { Container, Button, Form as BootstrapForm, Alert } from 'react-bootstrap';
+import { Container, Button, Form as BootstrapForm, Alert, Image } from 'react-bootstrap';
 
 // Validation schema
 const validationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   ingredients: Yup.string().required('Ingredients are required'),
   price: Yup.number().required('Price is required').positive('Price must be positive').integer('Price must be an integer'),
-  image: Yup.string().url('Must be a valid URL').required('Image URL is required'),
+  image: Yup.mixed().required('Image is required'),
 });
 
 const UpdateItem = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [item, setItem] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  const [item, setItem] = useState(null);
+  const [imagePreview, setImagePreview] = useState('');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios.get(`http://localhost:5000/items/${id}`)
       .then(response => {
         setItem(response.data);
+        setImagePreview(response.data.image); // Set initial image preview
       })
       .catch(error => {
         console.error("There was an error fetching the item!", error);
@@ -31,7 +33,17 @@ const UpdateItem = () => {
   }, [id]);
 
   const handleSubmit = (values) => {
-    axios.put(`http://localhost:5000/items/${id}`, values)
+    const formData = new FormData();
+    formData.append('name', values.name);
+    formData.append('ingredients', values.ingredients);
+    formData.append('price', values.price);
+    formData.append('image', values.image); // This should be a file object
+
+    axios.put(`http://localhost:5000/items/${id}`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
       .then(() => {
         navigate('/myitems');
       })
@@ -39,6 +51,14 @@ const UpdateItem = () => {
         console.error("There was an error updating the item!", error);
         setError("Could not update item.");
       });
+  };
+
+  const handleFileChange = (event, setFieldValue) => {
+    const file = event.currentTarget.files[0];
+    if (file) {
+      setFieldValue("image", file);
+      setImagePreview(URL.createObjectURL(file)); // Create a preview URL for the image
+    }
   };
 
   if (error) {
@@ -57,12 +77,13 @@ const UpdateItem = () => {
           name: item.name,
           ingredients: item.ingredients.join(', '),
           price: item.price,
-          image: item.image,
+          image: '', // Initialize with an empty string, will be handled by file input
         }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
+        enableReinitialize // To reset form values when item data changes
       >
-        {({ errors, touched }) => (
+        {({ setFieldValue }) => (
           <Form>
             <BootstrapForm.Group controlId="name">
               <BootstrapForm.Label>Name</BootstrapForm.Label>
@@ -83,8 +104,18 @@ const UpdateItem = () => {
             </BootstrapForm.Group>
 
             <BootstrapForm.Group controlId="image">
-              <BootstrapForm.Label>Image URL</BootstrapForm.Label>
-              <Field name="image" className="form-control" />
+              <BootstrapForm.Label>Image</BootstrapForm.Label>
+              <input 
+                type="file" 
+                name="image" 
+                className="form-control" 
+                onChange={(event) => handleFileChange(event, setFieldValue)}
+              />
+              {imagePreview && (
+                <div className="mt-2">
+                  <Image src={imagePreview} rounded style={{ width: '100px', height: 'auto' }} />
+                </div>
+              )}
               <ErrorMessage name="image" component="div" className="text-danger" />
             </BootstrapForm.Group>
 
