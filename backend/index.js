@@ -23,7 +23,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
 
-app.get("/",)
+app.get('/', (req, res) => {
+    res.send('Welcome to the Pizza Store API');
+});
 
 // Route to handle updating items with image upload
 app.put('/items/:id', upload.single('image'), (req, res) => {
