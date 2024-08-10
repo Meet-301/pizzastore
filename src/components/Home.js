@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../styles/Home.css';
+import img from '../images/bg.jpg';
 
 function Home() {
     return (
@@ -17,7 +18,7 @@ function Home() {
                         </Col>
                         <Col md={6}>
                             <img
-                                src="https://unsplash.com/photos/selective-focus-photography-of-two-pizzas-exSEmuA7R7k"
+                                src={img}
                                 alt="Delicious Pizza"
                                 className="img-fluid"
                             />
