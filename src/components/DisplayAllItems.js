@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
+/**
+ * @typedef {Object} Item
+ * @property {number} id
+ * @property {string} name
+ * @property {string[]} ingredients
+ * @property {number} price
+ * @property {string} image
+ */
+
+/**
+ * @type {Item[]}
+ */
+
 
 function DisplayAllItems() {
     const [items, setItems] = useState([]);
@@ -23,7 +36,7 @@ function DisplayAllItems() {
                 {items.map(item => (
                     <Col md={4} key={item.id} className="mb-4">
                         <Card>
-                            <Card.Img variant="top" src={item.image} />
+                            <Card.Img variant="top" src={item} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
