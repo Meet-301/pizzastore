@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import '../styles/Home.css';
-import delivery from "../images/delivery.jpg";
 
 function Home() {
     return (
@@ -33,7 +32,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src= {delivery}
+                        src= ""
                         alt="Fast Delivery"
                     />
                     <Carousel.Caption>
