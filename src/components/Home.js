@@ -4,6 +4,7 @@ import '../styles/Home.css';
 import pizza1 from "../images/pizza1.jpg"
 import pizza2 from "../images/pizza2.jpg"
 import pizza3 from "../images/pizza3.jpg"
+import ingredient from "../images/ingredient.jpg"
 
 function Home() {
     return (
@@ -39,7 +40,7 @@ function Home() {
                     <Row>
                         <Col md={4} className="text-center">
                             <img
-                                src="https://images.unsplash.com/photo-1581873372794-1e1e6a3e8f47"
+                                src= {ingredient}
                                 alt="Fresh Ingredients"
                                 className="img-fluid feature-image"
                             />
