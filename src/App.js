@@ -7,11 +7,13 @@ import AddNewItem from './components/AddNewItem';
 import UpdateItem from './components/UpdateItem';
 import DeleteItem from './components/DeleteItem';
 import Contact from './components/Contact';
+import MyNavbar from './components/Navbar';
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <MyNavbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
