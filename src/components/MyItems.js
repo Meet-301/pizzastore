@@ -46,7 +46,7 @@ const MyItems = () => {
 
     const handleUpdate = (id) => {
         // Navigate to the update page (assuming you have one)
-        navigate(`/updateitem/${id}`);
+        navigate(`/update/${id}`);
     };
 
     return (
