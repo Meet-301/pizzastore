@@ -5,6 +5,7 @@ import pizza1 from "../images/pizza1.jpg"
 import pizza2 from "../images/pizza2.jpg"
 import pizza3 from "../images/pizza3.jpg"
 import ingredient from "../images/ingredient.jpg"
+import delivery from "../images/delivery.jpg"
 
 function Home() {
     return (
