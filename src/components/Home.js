@@ -17,7 +17,7 @@ function Home() {
                         </Col>
                         <Col md={6}>
                             <img
-                                src="https://images.unsplash.com/photo-1603031979863-2b4f9c3c3b59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHBpenphfGVufDB8fHx8MTYyNjUxODMyMA&ixlib=rb-1.2.1&q=80&w=1080"
+                                src="https://unsplash.com/photos/selective-focus-photography-of-two-pizzas-exSEmuA7R7k"
                                 alt="Delicious Pizza"
                                 className="img-fluid"
                             />
