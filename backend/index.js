@@ -23,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
 
+app.get("/",)
+
 // Route to handle updating items with image upload
 app.put('/items/:id', upload.single('image'), (req, res) => {
   const itemId = req.params.id;
