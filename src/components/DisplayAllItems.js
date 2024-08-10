@@ -53,9 +53,10 @@ function DisplayAllItems() {
                                 className="img-fluid" 
                                 style={{ height: '200px', objectFit: 'cover' }} 
                             />
-                            <Card.Body>
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <Card.Text>
+                            <Card.Body className="d-flex flex-column">
+                                <Card.Title className="mb-3">{item.name}</Card.Title>
+                                <div className="d-flex flex-column justify-content-between mt-auto">
+                                    <Card.Text className="mb-3">
                                         <strong>Price: &#8377;{item.price}</strong>
                                     </Card.Text>
                                     <Button 
@@ -65,7 +66,6 @@ function DisplayAllItems() {
                                         Details
                                     </Button>
                                 </div>
-                                <Card.Title>{item.name}</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>
