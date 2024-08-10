@@ -3,19 +3,6 @@ import axios from 'axios';
 import { Container, Button, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-/**
- * @typedef {Object} Item
- * @property {number} id
- * @property {string} name
- * @property {string[]} ingredients
- * @property {number} price
- * @property {string} image
- */
-
-/**
- * @type {Item[]}
- */
-
 const MyItems = () => {
     const [items, setItems] = useState([]);
     const navigate = useNavigate();
@@ -45,7 +32,6 @@ const MyItems = () => {
     };
 
     const handleUpdate = (id) => {
-        // Navigate to the update page (assuming you have one)
         navigate(`/update/${id}`);
     };
 

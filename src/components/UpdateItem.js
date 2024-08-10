@@ -10,7 +10,7 @@ const validationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   ingredients: Yup.string().required('Ingredients are required'),
   price: Yup.number().required('Price is required').positive('Price must be positive').integer('Price must be an integer'),
-  image: Yup.mixed().required('Image is required'),
+  image: Yup.mixed().nullable(), // Image is optional
 });
 
 const UpdateItem = () => {
@@ -37,7 +37,9 @@ const UpdateItem = () => {
     formData.append('name', values.name);
     formData.append('ingredients', values.ingredients);
     formData.append('price', values.price);
-    formData.append('image', values.image); // This should be a file object
+    if (values.image) {
+      formData.append('image', values.image); // This should be a file object if provided
+    }
 
     axios.put(`http://localhost:5000/items/${id}`, formData, {
       headers: {
