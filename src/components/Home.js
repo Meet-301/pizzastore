@@ -3,6 +3,7 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import '../styles/Home.css';
 import pizza1 from "../images/pizza1.jpg"
 import pizza2 from "../images/pizza2.jpg"
+import pizza3 from "../images/pizza3.jpg"
 
 function Home() {
     return (
@@ -26,7 +27,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.unsplash.com/photo-1513267048337-7929e3efbe3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIzfHxjb3VyaWVyfGVufDB8fHx8MTY2NzA3NDA1MA&ixlib=rb-1.2.1&q=80&w=1080"
+                        src= {pizza3}
                         alt="Fast Delivery"
                     />
                 </Carousel.Item>
