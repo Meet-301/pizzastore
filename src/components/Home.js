@@ -13,10 +13,6 @@ function Home() {
                         src="https://images.unsplash.com/photo-1603031979863-2b4f9c3c3b59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHBpenphfGVufDB8fHx8MTYyNjUxODMyMA&ixlib=rb-1.2.1&q=80&w=1080"
                         alt="Delicious Pizza"
                     />
-                    <Carousel.Caption>
-                        <h3>Welcome to the Best Pizza Store</h3>
-                        <p>Enjoy our delicious, hot, and fresh pizzas delivered straight to your door.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -24,10 +20,6 @@ function Home() {
                         src="https://images.unsplash.com/photo-1601924638867-3ec60c13b692?ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHJpZGVyJTIwZGVsaXZlcnl8fDB8fHx8MTY4MDc1MjUzOA&ixlib=rb-4.0.3&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHBpenphfGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080"
                         alt="Fresh Ingredients"
                     />
-                    <Carousel.Caption>
-                        <h3>Fresh Ingredients</h3>
-                        <p>We use only the freshest ingredients for a perfect pizza every time.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -35,10 +27,6 @@ function Home() {
                         src="https://images.unsplash.com/photo-1513267048337-7929e3efbe3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIzfHxjb3VyaWVyfGVufDB8fHx8MTY2NzA3NDA1MA&ixlib=rb-1.2.1&q=80&w=1080"
                         alt="Fast Delivery"
                     />
-                    <Carousel.Caption>
-                        <h3>Fast Delivery</h3>
-                        <p>Get your pizza delivered hot and fresh in record time.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
 
