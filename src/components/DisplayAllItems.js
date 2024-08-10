@@ -15,7 +15,6 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
  * @type {Item[]}
  */
 
-
 function DisplayAllItems() {
     const [items, setItems] = useState([]);
 
@@ -36,7 +35,12 @@ function DisplayAllItems() {
                 {items.map(item => (
                     <Col md={4} key={item.id} className="mb-4">
                         <Card>
-                            <Card.Img variant="top" src={item.image} />
+                            <Card.Img 
+                                variant="top" 
+                                src={item.image} 
+                                className="img-fluid" 
+                                style={{ height: '200px', objectFit: 'cover' }} 
+                            />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
