@@ -34,7 +34,7 @@ app.get('/items', (req, res) => {
 });
 
 app.get('/',(req,res) => {
-  
+    res.send('Welcome to the Pizza Store API!');
 });
 
 // Get item by ID
