@@ -1,5 +1,5 @@
 {
-  "items": [
+  "items": [   
     {
       "id": 1,
       "name": "Margherita",
@@ -14,5 +14,5 @@
       "price": 350,
       "image": "/images/pepperoni.jpg"
     }
-  ]
+  ]  
 }
