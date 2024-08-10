@@ -4,14 +4,14 @@
         "id": 1,
         "name": "Margherita",
         "ingredients": ["tomato", "mozzarella", "basil"],
-        "price": 8.5,
+        "price": 250,
         "image": "/images/margherita.jpg"
       },
       {
         "id": 2,
         "name": "Pepperoni",
         "ingredients": ["tomato", "mozzarella", "pepperoni"],
-        "price": 9.5,
+        "price": 350,
         "image": "/images/pepperoni.jpg"
       }
     ]

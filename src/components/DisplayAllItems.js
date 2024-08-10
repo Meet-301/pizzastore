@@ -30,7 +30,7 @@ function DisplayAllItems() {
                                     {item.description}
                                 </Card.Text>
                                 <Card.Text>
-                                    <strong>Price: ${item.price}</strong>
+                                    <strong>Price: &#8377;{item.price}</strong>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
