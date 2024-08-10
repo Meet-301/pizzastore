@@ -36,7 +36,7 @@ function DisplayAllItems() {
                 {items.map(item => (
                     <Col md={4} key={item.id} className="mb-4">
                         <Card>
-                            <Card.Img variant="top" src={item} />
+                            <Card.Img variant="top" src={item.image} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
