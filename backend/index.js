@@ -33,6 +33,10 @@ app.get('/items', (req, res) => {
   res.json(items);
 });
 
+app.get('/',(req,res) => {
+  
+});
+
 // Get item by ID
 app.get('/items/:id', (req, res) => {
   const item = items.find(item => item.id === parseInt(req.params.id));
