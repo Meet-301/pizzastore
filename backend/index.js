@@ -1,47 +1,91 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-
-// Initialize Express app
+const cors = require('cors');
 const app = express();
 const port = 5000;
 
-// Set up multer for file handling
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Setup storage for Multer
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
+  destination: (req, file, cb) => {
+    cb(null, 'public/images');
   },
-  filename: function (req, file, cb) {
+  filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage });
+
+// Mock database
+let items = [
+  { id: 1, name: 'Margherita', ingredients: ['tomato', 'mozzarella', 'basil'], price: 250, image: '/images/margherita.jpg' },
+  { id: 2, name: 'Pepperoni', ingredients: ['tomato', 'mozzarella', 'pepperoni'], price: 350, image: '/images/pepperoni.jpg' },
+];
+
+// Get all items
+app.get('/items', (req, res) => {
+  res.json(items);
+});
+
+// Get item by ID
+app.get('/items/:id', (req, res) => {
+  const item = items.find(item => item.id === parseInt(req.params.id));
+  if (item) {
+    res.json(item);
+  } else {
+    res.status(404).send('Item not found');
   }
 });
 
-const upload = multer({ storage: storage });
-
-// Middleware to parse JSON and URL-encoded requests
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use('/uploads', express.static('uploads'));
-
-app.get('/', (req, res) => {
-    res.send('Welcome to the Pizza Store API');
+// Add new item
+app.post('/items', upload.single('image'), (req, res) => {
+  const newItem = {
+    id: items.length + 1,
+    name: req.body.name,
+    ingredients: req.body.ingredients.split(','),
+    price: parseFloat(req.body.price),
+    image: req.file ? `/images/${req.file.filename}` : '',
+  };
+  items.push(newItem);
+  res.status(201).json(newItem);
 });
 
-// Route to handle updating items with image upload
+// Update an item
 app.put('/items/:id', upload.single('image'), (req, res) => {
-  const itemId = req.params.id;
-  const { name, ingredients, price } = req.body;
-  const image = req.file ? req.file.path : null;
-
-  // Here you would update the item in your database
-  // Example response:
-  res.status(200).json({
-    message: 'Item updated successfully',
-    data: { name, ingredients, price, image },
-  });
+  const index = items.findIndex(item => item.id === parseInt(req.params.id));
+  if (index !== -1) {
+    const updatedItem = {
+      ...items[index],
+      name: req.body.name,
+      ingredients: req.body.ingredients.split(','),
+      price: parseFloat(req.body.price),
+      image: req.file ? `/images/${req.file.filename}` : items[index].image,
+    };
+    items[index] = updatedItem;
+    res.json(updatedItem);
+  } else {
+    res.status(404).send('Item not found');
+  }
 });
 
-// Start the server
+// Delete an item
+app.delete('/items/:id', (req, res) => {
+  const index = items.findIndex(item => item.id === parseInt(req.params.id));
+  if (index !== -1) {
+    items.splice(index, 1);
+    res.status(204).send();
+  } else {
+    res.status(404).send('Item not found');
+  }
+});
+
+// Start server
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
