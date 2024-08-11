@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import chef from "../../public/images/chef.jpg";
 
 const About = () => {
   return (
@@ -25,7 +26,7 @@ const About = () => {
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src="https://via.placeholder.com/500"
+              src= {chef}
               alt="Our Mission"
               className="img-fluid rounded"
             />
