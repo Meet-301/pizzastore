@@ -16,19 +16,19 @@ const About = () => {
         </Row>
 
         {/* Our Story Section */}
-        <Row className="align-items-center my-5">
-          <Col md={6} className="mb-4">
-            <h2 className="h4">Our Story</h2>
-            <p>
+        <Row className="my-5">
+          <Col md={12} className="mb-4">
+            <h2 className="h4 text-center">Our Story</h2>
+            <p className="text-center">
               Established with a passion for great pizza, our store has been serving delicious, handcrafted pizzas to our community. We focus on quality ingredients and innovative recipes to ensure an unforgettable dining experience.
             </p>
-            <p>
+            <p className="text-center">
               Our journey began with a commitment to delivering exceptional pizza, and we continue to strive for excellence with every pizza we make.
             </p>
           </Col>
-          <Col md={6} className="mb-4">
+          <Col md={12}>
             <img
-              src="/images/storefront.jpg"  // Placeholder image representing the store
+              src="https://via.placeholder.com/1200x600?text=Our+Store"  // Placeholder image
               alt="Our Store"
               className="img-fluid rounded"
             />
@@ -36,19 +36,19 @@ const About = () => {
         </Row>
 
         {/* Our Offerings Section */}
-        <Row className="align-items-center my-5">
-          <Col md={6} className="mb-4">
-            <h2 className="h4">Our Offerings</h2>
-            <p>
+        <Row className="my-5">
+          <Col md={12} className="mb-4">
+            <h2 className="h4 text-center">Our Offerings</h2>
+            <p className="text-center">
               We offer a diverse menu of pizzas, each crafted with care and the finest ingredients. From classic favorites to unique gourmet options, there's something for everyone to enjoy.
             </p>
-            <p>
+            <p className="text-center">
               In addition to our pizzas, we provide a selection of appetizers, salads, and desserts to complement your meal. Explore our menu and experience the flavors we have to offer.
             </p>
           </Col>
-          <Col md={6} className="mb-4">
+          <Col md={12}>
             <img
-              src="/images/menu.jpg"  // Placeholder image showcasing menu items
+              src="https://via.placeholder.com/1200x600?text=Menu+Items"  // Placeholder image
               alt="Our Menu"
               className="img-fluid rounded"
             />
@@ -56,19 +56,19 @@ const About = () => {
         </Row>
 
         {/* Our Values Section */}
-        <Row className="align-items-center my-5">
-          <Col md={6} className="mb-4">
-            <h2 className="h4">Our Values</h2>
-            <p>
+        <Row className="my-5">
+          <Col md={12} className="mb-4">
+            <h2 className="h4 text-center">Our Values</h2>
+            <p className="text-center">
               We are dedicated to maintaining the highest standards of quality, integrity, and customer satisfaction. Our core values guide every aspect of our business, from the ingredients we use to the service we provide.
             </p>
-            <p>
+            <p className="text-center">
               We believe in creating a positive impact in our community and continuously improving to offer the best possible experience to our guests.
             </p>
           </Col>
-          <Col md={6} className="mb-4">
+          <Col md={12}>
             <img
-              src="/images/thumbs.jpg"  // Placeholder image representing values or community
+              src="https://via.placeholder.com/1200x600?text=Our+Values"  // Placeholder image
               alt="Our Values"
               className="img-fluid rounded"
             />
