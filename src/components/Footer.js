@@ -8,7 +8,6 @@ const Footer = () => {
       <Container>
         <Row className="justify-content-center">
           <Col md={6} className="text-center mb-3">
-            <h5>Quick Links</h5>
             <Nav className="justify-content-center">
               <Nav.Item>
                 <Nav.Link as={Link} to="/about" className="text-light">About Us</Nav.Link>
@@ -21,7 +20,7 @@ const Footer = () => {
         </Row>
         <Row className="justify-content-center">
           <Col md={12} className="text-center">
-            <p className="mb-0">&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
+            <p className="mb-0">&copy; {new Date().getFullYear()} Butter Crust. All Rights Reserved.</p>
           </Col>
         </Row>
       </Container>
