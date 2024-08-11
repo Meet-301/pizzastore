@@ -21,7 +21,7 @@ const Contact = () => {
             <h2 className="h4">Our Contact Details</h2>
             <p><strong>Address:</strong> Morbi</p>
             <p><strong>Phone:</strong> 9876543210</p>
-            <p><strong>Email:</strong> contact@pizzastore.com</p>
+            <p><strong>Email:</strong> contact@buttercrust.com</p>
           </Col>
 
           {/* Contact Form */}
