@@ -18,15 +18,15 @@ const About = () => {
         {/* About Content */}
         <Row className="align-items-center my-5">
           <Col md={6} className="mb-4">
-            <h2 className="h4">Our Mission</h2>
+          <h2 className="h4">Our Story</h2>
             <p>
-              Our mission is to provide the best pizza experience by using only the freshest ingredients and delivering unparalleled service. We are committed to quality, innovation, and customer satisfaction.
+              From humble beginnings, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
             </p>
           </Col>
           <Col md={6} className="mb-4">
             <img
               src= "/images/chef.jpg"
-              alt="Our Mission"
+              alt="Our Story"
               className="img-fluid rounded"
             />
           </Col>
@@ -34,15 +34,15 @@ const About = () => {
 
         <Row className="align-items-center my-5">
           <Col md={6} className="order-md-2 mb-4">
-          <h2 className="h4">Our Story</h2>
+            <h2 className="h4">Our Vision</h2>
             <p>
-              From humble beginnings, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
+              We envision a world where every meal is a delightful experience, and we strive to be a part of that by offering delicious pizzas that bring people together.
             </p>
           </Col>
           <Col md={6} className="order-md-1 mb-4">
             <img
               src="/images/friends.jpg"
-              alt="Our Sto"
+              alt="Our Vision"
               className="img-fluid rounded"
             />
           </Col>
