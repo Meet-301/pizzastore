@@ -8,56 +8,67 @@ const About = () => {
         {/* Section Heading */}
         <Row className="justify-content-center">
           <Col md={8} className="text-center">
-            <h1 className="display-4">About Us</h1>
+            <h1 className="display-4">About Our Pizza Store</h1>
             <p className="lead text-muted">
-              Discover the story behind the butter crust and what makes us unique
+              Discover what makes our pizza store special and learn more about our offerings.
             </p>
           </Col>
         </Row>
 
-        {/* About Content */}
+        {/* Our Story Section */}
         <Row className="align-items-center my-5">
           <Col md={6} className="mb-4">
-            <h2 className="h4">Our Mission</h2>
+            <h2 className="h4">Our Story</h2>
             <p>
-              Our mission is to provide the best pizza experience by using only the freshest ingredients and delivering unparalleled service. We are committed to quality, innovation, and customer satisfaction.
+              Established with a passion for great pizza, our store has been serving delicious, handcrafted pizzas to our community. We focus on quality ingredients and innovative recipes to ensure an unforgettable dining experience.
+            </p>
+            <p>
+              Our journey began with a commitment to delivering exceptional pizza, and we continue to strive for excellence with every pizza we make.
             </p>
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src= "/images/chef.jpg"
-              alt="Our Mission"
+              src="/images/storefront.jpg"  // Placeholder image representing the store
+              alt="Our Store"
               className="img-fluid rounded"
             />
           </Col>
         </Row>
 
+        {/* Our Offerings Section */}
         <Row className="align-items-center my-5">
-          <Col md={6} className="order-md-2 mb-4">
-            <h2 className="h4">Our Vision</h2>
+          <Col md={6} className="mb-4">
+            <h2 className="h4">Our Offerings</h2>
             <p>
-              We envision a world where every meal is a delightful experience, and we strive to be a part of that by offering delicious pizzas that bring people together.
+              We offer a diverse menu of pizzas, each crafted with care and the finest ingredients. From classic favorites to unique gourmet options, there's something for everyone to enjoy.
+            </p>
+            <p>
+              In addition to our pizzas, we provide a selection of appetizers, salads, and desserts to complement your meal. Explore our menu and experience the flavors we have to offer.
             </p>
           </Col>
-          <Col md={6} className="order-md-1 mb-4">
+          <Col md={6} className="mb-4">
             <img
-              src="/images/friends.jpg"
-              alt="Our Vision"
+              src="/images/menu.jpg"  // Placeholder image showcasing menu items
+              alt="Our Menu"
               className="img-fluid rounded"
             />
           </Col>
         </Row>
 
+        {/* Our Values Section */}
         <Row className="align-items-center my-5">
           <Col md={6} className="mb-4">
             <h2 className="h4">Our Values</h2>
             <p>
-              We believe in integrity, excellence, and community. Our values guide us in everything we do, from sourcing ingredients to serving our customers.
+              We are dedicated to maintaining the highest standards of quality, integrity, and customer satisfaction. Our core values guide every aspect of our business, from the ingredients we use to the service we provide.
+            </p>
+            <p>
+              We believe in creating a positive impact in our community and continuously improving to offer the best possible experience to our guests.
             </p>
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src="/images/thumbs.jpg"
+              src="/images/values.jpg"  // Placeholder image representing values or community
               alt="Our Values"
               className="img-fluid rounded"
             />
