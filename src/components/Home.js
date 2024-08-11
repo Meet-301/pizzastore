@@ -12,7 +12,7 @@ function Home() {
     return (
         <div className="home-page">
             {/* Slider Section */}
-            <Carousel className="hero-slider">
+            <Carousel className="hero-slider" interval={3000}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
