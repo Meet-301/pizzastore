@@ -57,7 +57,7 @@ const About = () => {
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src="https://via.placeholder.com/500"
+              src="/images/thumbs.jpg"
               alt="Our Values"
               className="img-fluid rounded"
             />
