@@ -9,6 +9,7 @@ import UpdateItem from './components/UpdateItem';
 import DeleteItem from './components/DeleteItem';
 import Contact from './components/Contact';
 import MyNavbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
     return (
@@ -26,7 +27,9 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </div>
+            <Footer />
         </Router>
+        
     );
 }
 
