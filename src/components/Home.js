@@ -1,26 +1,18 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import '../styles/Home.css';
-import pizza1 from "../images/pizza1.jpg"
-import pizza2 from "../images/pizza2.jpg"
-import pizza3 from "../images/pizza3.jpg"
-import ingredient from "../images/ingredient.jpg"
-import delivery from "../images/delivery.jpg"
-import taste from "../images/taste.jpg"
+import pizza1 from "../images/pizza1.jpg";
+import pizza2 from "../images/pizza2.jpg";
+import pizza3 from "../images/pizza3.jpg";
+import ingredient from "../images/ingredient.jpg";
+import delivery from "../images/delivery.jpg";
+import taste from "../images/taste.jpg";
 
 function Home() {
-    const carouselRef = useRef(null);
-
-    useEffect(() => {
-        if (carouselRef.current) {
-            carouselRef.current.play();  // Start the carousel
-        }
-    }, []);
-
     return (
         <div className="home-page">
             {/* Slider Section */}
-            <Carousel className="hero-slider" interval={3000} ref={carouselRef} pause={false}>
+            <Carousel className="hero-slider" interval={3000} pause={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
