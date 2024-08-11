@@ -8,72 +8,64 @@ const About = () => {
         {/* Section Heading */}
         <Row className="justify-content-center">
           <Col md={8} className="text-center">
-            <h1 className="display-4">About Our Pizza Store</h1>
+            <h1 className="display-4">About Us</h1>
             <p className="lead text-muted">
-              Discover what makes our pizza store special and learn more about our offerings.
+              Discover the story behind our brand and what makes us unique.
             </p>
           </Col>
         </Row>
 
-        {/* Our Story Section */}
-        <Row className="my-5">
-          <Col md={12} className="mb-4">
-            <h2 className="h4 text-center">Our Story</h2>
-            <p className="text-center">
-              Established with a passion for great pizza, our store has been serving delicious, handcrafted pizzas to our community. We focus on quality ingredients and innovative recipes to ensure an unforgettable dining experience.
-            </p>
-            <p className="text-center">
-              Our journey began with a commitment to delivering exceptional pizza, and we continue to strive for excellence with every pizza we make.
+        {/* Our Values Section */}
+        <Row className="align-items-center my-5">
+          <Col md={6} className="mb-4">
+            <h2 className="h4">Our Values</h2>
+            <p>
+              We believe in integrity, excellence, and community. Our handshake is more than just a gesture—it’s our commitment to these principles.
             </p>
           </Col>
-          <Col md={12}>
+          <Col md={6} className="mb-4">
             <img
-              src="https://via.placeholder.com/1200x600?text=Our+Store"  // Placeholder image
-              alt="Our Store"
+              src="/images/handshake.jpg"  // Assuming you have the handshake image in the public/images folder
+              alt="Our Values"
+              className="img-fluid rounded"
+            />
+          </Col>
+        </Row>
+
+        {/* Our Story Section */}
+        <Row className="align-items-center my-5">
+          <Col md={6} className="mb-4">
+            <h2 className="h4">Our Story</h2>
+            <p>
+              From humble beginnings, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
+            </p>
+          </Col>
+          <Col md={6} className="mb-4">
+            <img
+              src="/images/story.jpg"  // Placeholder image for our story
+              alt="Our Story"
               className="img-fluid rounded"
             />
           </Col>
         </Row>
 
         {/* Our Offerings Section */}
-        <Row className="my-5">
-          <Col md={12} className="mb-4">
-            <h2 className="h4 text-center">Our Offerings</h2>
-            <p className="text-center">
-              We offer a diverse menu of pizzas, each crafted with care and the finest ingredients. From classic favorites to unique gourmet options, there's something for everyone to enjoy.
-            </p>
-            <p className="text-center">
-              In addition to our pizzas, we provide a selection of appetizers, salads, and desserts to complement your meal. Explore our menu and experience the flavors we have to offer.
+        <Row className="align-items-center my-5">
+          <Col md={6} className="mb-4">
+            <h2 className="h4">Our Offerings</h2>
+            <p>
+              We offer a wide range of products and services designed to meet the needs of our diverse clientele. Each offering reflects our commitment to quality and customer satisfaction.
             </p>
           </Col>
-          <Col md={12}>
+          <Col md={6} className="mb-4">
             <img
-              src="https://via.placeholder.com/1200x600?text=Menu+Items"  // Placeholder image
-              alt="Our Menu"
+              src="/images/offerings.jpg"  // Placeholder image for offerings
+              alt="Our Offerings"
               className="img-fluid rounded"
             />
           </Col>
         </Row>
 
-        {/* Our Values Section */}
-        <Row className="my-5">
-          <Col md={12} className="mb-4">
-            <h2 className="h4 text-center">Our Values</h2>
-            <p className="text-center">
-              We are dedicated to maintaining the highest standards of quality, integrity, and customer satisfaction. Our core values guide every aspect of our business, from the ingredients we use to the service we provide.
-            </p>
-            <p className="text-center">
-              We believe in creating a positive impact in our community and continuously improving to offer the best possible experience to our guests.
-            </p>
-          </Col>
-          <Col md={12}>
-            <img
-              src="https://via.placeholder.com/1200x600?text=Our+Values"  // Placeholder image
-              alt="Our Values"
-              className="img-fluid rounded"
-            />
-          </Col>
-        </Row>
       </Container>
     </div>
   );
