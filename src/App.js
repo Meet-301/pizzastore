@@ -9,7 +9,8 @@ import DeleteItem from './components/DeleteItem';
 import MyNavbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './components/About';
-import './App.css'; // Ensure this CSS file is imported
+import Contact from './components/Contact';
+import './App.css';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/myitems" element={<MyItems />} />
                         <Route path="/add" element={<AddItem />} />
                         <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
                         <Route path="/update/:id" element={<UpdateItem />} />
                         <Route path="/delete/:id" element={<DeleteItem />} />
                     </Routes>
