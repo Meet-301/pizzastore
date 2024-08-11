@@ -25,7 +25,7 @@ const About = () => {
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src= "/images/chef.jpg"
+              src= "/images/story.jpg"
               alt="Our Story"
               className="img-fluid rounded"
             />
