@@ -34,15 +34,15 @@ const About = () => {
 
         <Row className="align-items-center my-5">
           <Col md={6} className="order-md-2 mb-4">
-            <h2 className="h4">Our Vision</h2>
+          <h2 className="h4">Our Story</h2>
             <p>
-              We envision a world where every meal is a delightful experience, and we strive to be a part of that by offering delicious pizzas that bring people together.
+              From humble beginnings, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
             </p>
           </Col>
           <Col md={6} className="order-md-1 mb-4">
             <img
               src="/images/friends.jpg"
-              alt="Our Vision"
+              alt="Our Sto"
               className="img-fluid rounded"
             />
           </Col>
