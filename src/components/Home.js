@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import '../styles/Home.css';
 import pizza1 from "../images/pizza1.jpg"
@@ -9,28 +9,36 @@ import delivery from "../images/delivery.jpg"
 import taste from "../images/taste.jpg"
 
 function Home() {
+    const carouselRef = useRef(null);
+
+    useEffect(() => {
+        if (carouselRef.current) {
+            carouselRef.current.play();  // Start the carousel
+        }
+    }, []);
+
     return (
         <div className="home-page">
             {/* Slider Section */}
-            <Carousel className="hero-slider" interval={3000}>
+            <Carousel className="hero-slider" interval={3000} ref={carouselRef} pause={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src= {pizza1}
+                        src={pizza1}
                         alt="Delicious Pizza"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src= {pizza2}
+                        src={pizza2}
                         alt="Fresh Ingredients"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src= {pizza3}
+                        src={pizza3}
                         alt="Fast Delivery"
                     />
                 </Carousel.Item>
@@ -42,7 +50,7 @@ function Home() {
                     <Row>
                         <Col md={4} className="text-center">
                             <img
-                                src= {ingredient}
+                                src={ingredient}
                                 alt="Fresh Ingredients"
                                 className="img-fluid feature-image"
                             />
@@ -51,7 +59,7 @@ function Home() {
                         </Col>
                         <Col md={4} className="text-center">
                             <img
-                                src= {delivery}
+                                src={delivery}
                                 alt="Fast Delivery"
                                 className="img-fluid feature-image"
                             />
@@ -60,7 +68,7 @@ function Home() {
                         </Col>
                         <Col md={4} className="text-center">
                             <img
-                                src= {taste}
+                                src={taste}
                                 alt="Great Taste"
                                 className="img-fluid feature-image"
                             />
