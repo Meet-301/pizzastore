@@ -68,7 +68,7 @@ const About = () => {
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src="/images/values.jpg"  // Placeholder image representing values or community
+              src="/images/thumbs.jpg"  // Placeholder image representing values or community
               alt="Our Values"
               className="img-fluid rounded"
             />
