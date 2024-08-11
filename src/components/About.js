@@ -41,7 +41,7 @@ const About = () => {
           </Col>
           <Col md={6} className="order-md-1 mb-4">
             <img
-              src="https://via.placeholder.com/500"
+              src="/images/friends.jpg"
               alt="Our Vision"
               className="img-fluid rounded"
             />
@@ -57,7 +57,7 @@ const About = () => {
           </Col>
           <Col md={6} className="mb-4">
             <img
-              src="/images/friends.jpg"
+              src="https://via.placeholder.com/500"
               alt="Our Values"
               className="img-fluid rounded"
             />
