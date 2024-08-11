@@ -10,7 +10,7 @@ const About = () => {
           <Col md={8} className="text-center">
             <h1 className="display-4">About Us</h1>
             <p className="lead text-muted">
-              Discover the story behind our brand and what makes us unique.
+              Discover the story behind the butter crust and what makes us unique
             </p>
           </Col>
         </Row>
