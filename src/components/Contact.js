@@ -10,7 +10,7 @@ const Contact = () => {
           <Col md={8} className="text-center mb-4">
             <h1 className="display-4">Contact Us</h1>
             <p className="lead text-muted">
-              Get in touch with us for any inquiries or support
+              Get in touch with us for any inquiries or support.
             </p>
           </Col>
         </Row>
@@ -19,7 +19,8 @@ const Contact = () => {
         <Row className="mb-5">
           <Col md={6} className="mb-4">
             <h2 className="h4">Our Contact Details</h2>
-            <p><strong>Address:</strong> Morbi</p>
+            <p><strong>Address:</strong> 123 Pizza Lane, Food City, FC 12345</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
             <p><strong>Email:</strong> contact@pizzastore.com</p>
           </Col>
 
@@ -42,9 +43,11 @@ const Contact = () => {
                 <Form.Control as="textarea" rows={5} placeholder="Your message" required />
               </Form.Group>
               
-              <Button variant="primary" type="submit">
-                Send Message
-              </Button>
+              <div className="mt-4"> {/* Added margin-top here */}
+                <Button variant="primary" type="submit">
+                  Send Message
+                </Button>
+              </div>
             </Form>
           </Col>
         </Row>
