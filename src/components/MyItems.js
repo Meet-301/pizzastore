@@ -18,7 +18,7 @@ const MyItems = () => {
     }, []);
 
     const handleAddItem = () => {
-        navigate('/additem');
+        navigate('/add');
     };
 
     const handleDelete = (id) => {

@@ -8,6 +8,7 @@ import UpdateItem from './components/UpdateItem';
 import DeleteItem from './components/DeleteItem';
 import MyNavbar from './components/Navbar';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
     return (
@@ -18,7 +19,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/items" element={<DisplayAllItems />} />
                     <Route path="/myitems" element={<MyItems />} />
-                    <Route path="/additem" element={<AddItem />} />
+                    <Route path="/add" element={<AddItem />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/update/:id" element={<UpdateItem />} />
                     <Route path="/delete/:id" element={<DeleteItem />} />
                 </Routes>
