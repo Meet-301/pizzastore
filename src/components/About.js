@@ -20,7 +20,7 @@ const About = () => {
           <Col md={6} className="mb-4">
           <h2 className="h4">Our Story</h2>
             <p>
-              From humble beginnings, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
+              From humble beginnings in 2004, our brand has grown into a beacon of quality and innovation. Our story is one of dedication and passion, continuously striving to bring the best to our community.
             </p>
           </Col>
           <Col md={6} className="mb-4">
