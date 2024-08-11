@@ -9,25 +9,27 @@ import DeleteItem from './components/DeleteItem';
 import MyNavbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './components/About';
+import './App.css'; // Ensure this CSS file is imported
 
 function App() {
     return (
         <Router>
             <div className="App">
                 <MyNavbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/items" element={<DisplayAllItems />} />
-                    <Route path="/myitems" element={<MyItems />} />
-                    <Route path="/add" element={<AddItem />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/update/:id" element={<UpdateItem />} />
-                    <Route path="/delete/:id" element={<DeleteItem />} />
-                </Routes>
+                <div className="content">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/items" element={<DisplayAllItems />} />
+                        <Route path="/myitems" element={<MyItems />} />
+                        <Route path="/add" element={<AddItem />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/update/:id" element={<UpdateItem />} />
+                        <Route path="/delete/:id" element={<DeleteItem />} />
+                    </Routes>
+                </div>
             </div>
-            <Footer />
+            <Footer /> {/* Place the Footer component outside the Router */}
         </Router>
-        
     );
 }
 

@@ -1,20 +1,19 @@
 /* App.css */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
-  
-  body {
+}
+
+.App {
     display: flex;
     flex-direction: column;
-  }
-  
-  .App {
+    min-height: 100vh;
+    /* Ensure the App container takes up at least the full height of the viewport */
+}
+
+.content {
     flex: 1;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
-  
+    /* Takes up remaining space to push the footer to the bottom */
+}
